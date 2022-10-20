@@ -3,7 +3,8 @@ import "./register.style.css"
 
 export default function Register(){
 
-    
+
+    let status = "no"
         const [formData,setFormData] = React.useState(
             {
                 email:"",
@@ -20,10 +21,11 @@ export default function Register(){
         event.preventDefault()
 
         if(formData.password === formData.passwordConfirm){
-            console.log("YUPPPPPP")
+            status="Loged In";
+
         }
         else{
-            console.log("NOP")
+            status="Password does not match"
         }
 
     }
@@ -42,6 +44,7 @@ export default function Register(){
 return(
     <div className="formContainer">
         <form className="form" onSubmit={handleSubmit}>
+           <div className="form-style">
             <input
             type="email"
             placeholder="Email Address !"
@@ -67,7 +70,7 @@ return(
             onChange={handleChange}
             value={formData.passwordConfirm}
             />
-            
+            </div>
 
             <input 
             id="okayToEmail"
@@ -75,10 +78,13 @@ return(
             name="joinedNewLetter"
             onChange={handleChange}
             checked={formData.joinedNewLetter}
+            i want to join
             />
             <label htmlFor="okayToEmail"> I want to join the Newsletter</label>
-
+            <br/><br/>
             <button>Submit</button>
+            <br/>
+            <label>{status}</label>
 
 
         </form>
