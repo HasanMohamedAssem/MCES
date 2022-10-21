@@ -21,7 +21,7 @@ export default function Register(){
         event.preventDefault()
 
         if(formData.password === formData.passwordConfirm){
-            status="Loged In";
+            status="Logged In";
 
         }
         else{

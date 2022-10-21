@@ -1,0 +1,17 @@
+h3,a{
+    color: aliceblue;
+    font-size: larger;
+}
+.nav-container{
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+    
+}
+.nav-right{
+    padding: 20px;
+}
+
+.nav-right>a{
+    margin: 20px;
+}
